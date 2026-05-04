@@ -28,6 +28,7 @@ struct QueryRequest {
     std::string from_ident;          // e.g. "LAX"
     std::string to_ident;            // e.g. "ABQ"
     int aircraft_ceiling_ft = 18000; // any leg with MEA > ceiling is unflyable
+    bool rnav_available = true;      // allows filtering of GPS routes
 };
 ```
 
@@ -72,6 +73,7 @@ cifp::QueryRequest req;
 req.from_ident = "LAX";
 req.to_ident   = "ABQ";
 req.aircraft_ceiling_ft = 17000;
+req.rnav_available = true;
 
 cifp::QueryResponse resp = service.query(req);
 if (resp.ok) {
