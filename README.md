@@ -7,7 +7,9 @@ capstone project.
 
 The system answers requests of the form "find the shortest low-altitude
 airway route from fix A to fix B for an aircraft with ceiling X and equipment Y" in
-microseconds (warm cache) to under a millisecond (cold).
+microseconds (warm cache) to under 3 milliseconds (cold)*.
+
+*: Mean times used.
 
 ## Contents
 
